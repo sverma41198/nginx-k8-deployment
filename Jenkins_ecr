@@ -20,11 +20,11 @@ pipeline {
  }
  }
  
- stage('Cloning Git') {
- steps {
- checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '', url: 'https://github.com/sverma41198/nginx-k8-deployment.git']]]) 
- }
- }
+//  stage('Cloning Git') {
+//  steps {
+//  checkout([$class: 'GitSCM', branches: [[name: '*/main']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[credentialsId: '', url: 'https://github.com/sverma41198/nginx-k8-deployment.git']]]) 
+//  }
+//  }
  
  // Building Docker images
  stage('Building image') {
