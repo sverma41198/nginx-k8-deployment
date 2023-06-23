@@ -1,6 +1,7 @@
 pipeline {
  agent any
  environment {
+ BUTTLER_SAYS_SO= credentials("sourabh-aws-cred")
  AWS_ACCOUNT_ID="028677550726"
  AWS_DEFAULT_REGION="ap-south-1" 
  IMAGE_REPO_NAME="nginx"
