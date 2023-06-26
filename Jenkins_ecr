@@ -45,7 +45,7 @@ pipeline {
  stage('Deploying React.js container to Kubernetes') {
       steps {
         script {
-          kubernetesDeploy(configs: "nginx.yaml")
+          sh "kubectl apply -f nginx.yaml --namespace default"
         }
  }
  
