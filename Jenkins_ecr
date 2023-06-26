@@ -42,5 +42,12 @@ pipeline {
  }
  }
  }
+ stage("Deploy to K8 Cluster"){
+ steps{
+  sh "Minikube start"
+  sh "kubectl apply -f nginx.yaml"
+ }
+ }
+ 
  }
 }
