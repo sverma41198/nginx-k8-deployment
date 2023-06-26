@@ -1,0 +1,12 @@
+pipeline{
+
+	agent any
+	stages{
+		stage("Deploy Nginx in K8")
+		{
+			steps{	
+				sh "kubectl apply -f nginx.yaml"
+				}
+		}
+	}
+} 

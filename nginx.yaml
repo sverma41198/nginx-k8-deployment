@@ -8,7 +8,7 @@ spec:
   selector:
     app: nginx
   ports:
-  - port: 80
+  - port: 8000
     protocol: TCP
     targetPort: 80
   type: ClusterIP
@@ -29,10 +29,13 @@ spec:
       labels:
         app: nginx
     spec:
+      imagePullSecrets:
+      - name: my-registry-key-1	
       containers:
       - name: nginx
-        image: nginx:latest
+        image: 028677550726.dkr.ecr.ap-south-1.amazonaws.com/nginx:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 80
           protocol: TCP
+       
