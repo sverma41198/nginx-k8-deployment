@@ -42,7 +42,7 @@ pipeline {
  }
  }
  }
- stage("Deeploy on K8"){
+ stage("Deploy on K8"){
     steps{
         sshagent(['k8-deploy-2']) {
             sh "scp -o StrictHostKeyChecking=no nginx.yaml sourabh@ubuntu:/home/sourabh"
