@@ -30,7 +30,7 @@ spec:
         app: nginx
     spec:
       imagePullSecrets:
-      - name: my-registry-key-1	
+      - name: my-registry-key-2	
       containers:
       - name: nginx
         image: 028677550726.dkr.ecr.ap-south-1.amazonaws.com/nginx:latest
