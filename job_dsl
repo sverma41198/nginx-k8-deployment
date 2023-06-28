@@ -1,0 +1,16 @@
+pipelineJob("Build-Deploy") {
+  definition {
+    cpsScm {
+      scm {
+        git {
+          remote {
+            url("https://github.com/sverma41198/nginx-k8-deployment.git")
+            credentials("")
+          }
+          branch('*/main')
+        }
+      }
+      scriptPath("Jenkins_ecr")
+    }
+  }
+}
